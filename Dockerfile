@@ -10,7 +10,6 @@ RUN git clone https://github.com/OlivierData/live-attestation-fr-q4-2020.git
 
 WORKDIR ./live-attestation-fr-q4-2020 
 
-EXPOSE 8080
 RUN npm i
 ENTRYPOINT npm start
 RUN npm run build:dev
