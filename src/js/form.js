@@ -14,7 +14,8 @@ const createTitle = () => {
 // createElement('div', { className: 'form-group' })
 
 const getCurrentTime = () => {
-  const date = new Date()
+  var date = new Date() // - 1500  = -25 minutes
+  date.setSeconds( date.getSeconds() - 1500 );
   return date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })
 }
 
