@@ -1,12 +1,16 @@
-# Générateur de certificat de déplacement
+# Générateur de certificat de déplacement permettant de générer le PDF (QR code compris) en live 
+
+* Les paramètres principaux sont accessibles via l'URL permettant de générer le certificat en live
+* Installer l'application sur sa propre instance pour des raisons de confidentialité (les logs du serveur hôte conservent les URL consultées)
+* PDF généré "25 minutes avant"
 
 ## Développer
 
 ### Installer le projet
 
 ```console
-git clone https://github.com/LAB-MI/attestation-deplacement-derogatoire-q4-2020.git
-cd attestation-deplacement-derogatoire-q4-2020
+git clone https://github.com/OlivierData/live-attestation-fr-q4-2020.git
+cd live-attestation-fr-q4-2020
 npm i
 npm start
 ```
