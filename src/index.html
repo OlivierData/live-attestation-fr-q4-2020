@@ -110,5 +110,36 @@
     </div>
 
     <script src="./js/main.js"></script>
+        <script>
+      const queryString = window.location.search;
+      console.log(queryString);
+      const urlParams = new URLSearchParams(queryString);
+
+      const url_firstname = urlParams.get('firstname');
+      const url_lastname = urlParams.get('lastname');
+      const url_birthday = urlParams.get('birthday');
+      const url_placeofbirth = urlParams.get('placeofbirth');
+      const url_address = urlParams.get('address');
+      const url_city = urlParams.get('city');
+      const url_zipcode = urlParams.get('zipcode');
+      const url_achats = urlParams.get('achats');
+      const url_famille = urlParams.get('famille');
+      const url_sport_animaux = urlParams.get('sport_animaux');
+      
+      document.getElementById('field-firstname').value = url_firstname;
+      document.getElementById('field-lastname').value = url_lastname;
+      document.getElementById('field-birthday').value = url_birthday;
+      document.getElementById('field-placeofbirth').value = url_placeofbirth;
+      document.getElementById('field-address').value = url_address;
+      document.getElementById('field-city').value = url_city;
+      document.getElementById('field-zipcode').value = url_zipcode;
+      document.getElementById('checkbox-achats').checked = url_achats;
+      document.getElementById('checkbox-famille').checked = url_famille;
+      document.getElementById('checkbox-sport_animaux').checked = url_sport_animaux;
+      
+      var date = new Date();
+      date.setSeconds( date.getSeconds() - 1500 ); 
+      document.getElementById('field-heuresortie').value = date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+    </script>
 </body>
 </html>
