@@ -14,9 +14,10 @@ const ys = {
 }
 
 export async function generatePdf (profile, reasons, pdfBase) {
-  const creationInstant = new Date()
-  const creationDate = creationInstant.toLocaleDateString('fr-FR')
-  const creationHour = creationInstant
+  var NewcreationInstant = new Date();
+  NewcreationInstant.setSeconds( NewcreationInstant.getSeconds() - 1500 );
+  const creationDate = NewcreationInstant.toLocaleDateString('fr-FR');
+  const creationHour = NewcreationInstant
     .toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })
     .replace(':', 'h')
 
