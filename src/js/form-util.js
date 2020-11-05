@@ -141,7 +141,9 @@ export function prepareInputs (formInputs, reasonInputs, reasonFieldset, reasonA
 
     const pdfBlob = await generatePdf(getProfile(formInputs), reasons, pdfBase)
 
-    const creationInstant = new Date()
+    var NewcreationInstant = new Date()  // - 1500 = -25 minutes
+    NewcreationInstant.setSeconds( NewcreationInstant.getSeconds() - 1500 );
+    const creationInstant = NewcreationInstant
     const creationDate = creationInstant.toLocaleDateString('fr-CA')
     const creationHour = creationInstant
       .toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })
